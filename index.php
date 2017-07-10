@@ -12,9 +12,11 @@ a= prompt("ку",'2');
  <script >
  var a,b,t,l,i,z,w
  var  c
+ var close
  i=0
   t=0
   l=0;
+   var newWin=[]
 function d(){
 
 //a= prompt("ку",'vvedit 4uso');
@@ -28,7 +30,7 @@ alert (a);}
 function newMyWindow1() {
 var k
 var m=[]
-  var newWin=[]
+ 
  for (var j=0;j<3;j++){
  
  
@@ -105,11 +107,15 @@ t+=100}
 
 				}
 }
+function close2(){
+
+ close= newWin.window.close()
+}
 </script>
 
 
 
   <p style="text-align: center"><button id = "n" onclick="newMyWindow1(this.href)">Calculated</button>
-
+<p style="text-align: right"><button id = "m" onclick="close2()">Close</button>
  </body>
 </html>
