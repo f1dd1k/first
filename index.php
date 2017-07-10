@@ -11,7 +11,7 @@ a= prompt("ку",'2');
 </script >
  <script >
  var a,b,t,l,i,z,w
- var int c
+ var  c
  i=0
   t=0
   l=0;
@@ -26,16 +26,41 @@ alert (a);}
 
 
 function newMyWindow1() {
-
+var k
 var m=[]
   var newWin=[]
  for (var j=0;j<3;j++){
- c=a/100;
  
- if (c!=0) {
- z=c
+ 
+ if (a>10) {
+ c=a
  }
- z=c%10
+ z=a%10
+ if (a>10){
+ var des=a/10}
+ des=Math.floor( des);
+   switch (des){ 
+  case 1: k="X";
+  break;
+   case 2: k="XX";
+  break;
+   case 3: k="XXX";
+  break;
+   case 4: k="XL";
+  break;
+   case 5: k="L";
+  break;
+   case 6: k="LX";
+  break;
+   case 7: k="LXX";
+  break;
+   case 8: k="LXXX";
+  break;
+   case 9: k="XC";
+  break;
+   case 10: k="C";
+  break;
+  default: k=' ';}
   switch (z){ 
   case 1: w="I";
   break;
@@ -57,7 +82,7 @@ var m=[]
   break;
    case 0: w="X";
   break;
-  default: w="lol";}
+  default: w=' ';}
   
  b=w+w 
   }
@@ -69,7 +94,7 @@ var m=[]
   
   for (i=0;i<1;i++){ 
   newWin= window.open("about:blank", "helo"+a, "width=100,height=100,left="+l +",top="+t+"");
-  newWin.document.write(b);
+  newWin.document.write(k+w);
 
 a=+a+2
 
