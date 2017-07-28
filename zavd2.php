@@ -35,17 +35,32 @@
  <body>
 
  <script >
-var a= prompt("Введіть кількість блоків",'2');
+var max= prompt("Введіть кількість блоків",'2');
 
-</script >
-<script >
+var min=0
+     var rand = min - 0.5 + Math.random() * (max - min )
+    rand = Math.round(rand);
+    alert(rand)
+  
 var newDiv;
 var i;
 function qwe()
-{alert ('q')}
+
+{var chuslo1=this.innerHTML
+
+chuslo=document.getElementById(+chuslo1);
+if (+chuslo1 ==rand){
+
+chuslo.className= "spanGreen";}
+else {
+chuslo.className= "spanRed";}
+
+
+
+}
 function wr( ) 
 {
-for ( i=0;i<a;i++){
+for ( i=0;i<max;i++){
 
 
 newBlock();
@@ -55,10 +70,13 @@ function newBlock(){
  newDiv = document.createElement('div');
    newDiv.className = "span1";
 newDiv.innerHTML = +i;
-
+newDiv.id=+i;
 document.body.appendChild(newDiv);
-newDiv.onclick=qwe();
+newDiv.addEventListener("click", qwe);
+
+
 }
+
 wr()
 </script >
 
