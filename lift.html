@@ -1,0 +1,80 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>dom</title> <style> .span1 { 
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  margin: 1px;
+  float: left; }
+  
+  
+		.spanBlue{
+			background: blue;
+			display: round;
+			width: 50px;
+			height: 50px;
+			margin: 1px;
+			float: left;
+		}
+		.spanGreen{
+			background: green;
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin: 1px;
+			float: left;
+		}
+     	.spanRed{
+			background: red;
+			display: round;
+			width: 50px;
+			height: 50px;
+			margin: 1px;
+			float: left;
+		}
+	</style>
+</head>
+ 
+ <body>
+
+ <script >
+var max= prompt("Введіть кількість поверхів",'10');
+
+var min=0
+var start;   
+var newDiv;
+var i;
+function qwe()
+{var end=this.innerHTML
+
+if (start%2==1&&+end%2==0){
+  
+this.className= "spanGreen";}
+else {endBlock=document.getElementById(+end+1);
+endBlock.className= "spanGreen";}
+}
+function wr( ) 
+{
+for ( i=0;i<max;i++){
+newBlock();
+}}
+function newBlock(){
+ newDiv = document.createElement('div');
+   newDiv.className = "span1";
+newDiv.innerHTML = +i;
+newDiv.id=+i;
+document.body.appendChild(newDiv);
+newDiv.addEventListener("click", qwe);
+}
+wr()
+     start= prompt("Початковий поверх",'3');
+ document.getElementById(+start).className="spanBlue"
+</script >
+
+
+ </body>
+</html>
